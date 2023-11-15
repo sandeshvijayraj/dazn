@@ -1,0 +1,8 @@
+*/node_modules
+.env-template
+docker-compose.yaml
+.prettierrc
+README.md
+docker
+test
+.git

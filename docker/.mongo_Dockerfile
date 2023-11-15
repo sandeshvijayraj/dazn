@@ -1,0 +1,7 @@
+# Use the official MongoDB image as a base image
+FROM mongo:latest
+
+ENV MONGO_INITDB_ROOT_USERNAME ${MONGO_USERNAME}
+ENV MONGO_INITDB_ROOT_PASSWORD ${MONGO_PASSWORD}
+
+EXPOSE 27017

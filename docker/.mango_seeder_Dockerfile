@@ -1,0 +1,13 @@
+FROM mongo:latest
+FROM node:latest
+
+ENV MONGO_INITDB_ROOT_USERNAME ${MONGO_USERNAME}
+ENV MONGO_INITDB_ROOT_PASSWORD ${MONGO_PASSWORD}
+
+WORKDIR /seedData
+
+COPY ../mongoscripts /
+RUN yarn install
+
+EXPOSE 27017
+CMD [ "yarn", "start:seed" ]

@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  my_api:
+    build:
+      dockerfile: docker/.api_Dockerfile
+      context: .
+    ports:
+      - '3000:3000'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    depends_on:
+      - my_mongo
+      - mongo_seed
+    networks:
+      - my_network
+  mongo_seed:
+    build:
+      dockerfile: docker/.mango_seeder_Dockerfile
+      context: .
+    networks:
+      - my_network
+    depends_on:
+      - my_mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+  my_mongo:
+    image: mongo:7.0
+    ports:
+      - '27017:27017'
+    networks:
+      - my_network
+    command: mongod
+
+networks:
+  my_network:
+    driver: bridge

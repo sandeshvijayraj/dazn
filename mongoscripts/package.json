@@ -1,0 +1,19 @@
+{
+  "name": "db_seed",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start:seed": "ts-node ingest_mango_seed.ts"
+  },
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.9.0",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.0",
+    "ts-node": "^10.9.1",
+    "tsc": "^2.0.4",
+    "typescript": "^5.2.2"
+  }
+}
