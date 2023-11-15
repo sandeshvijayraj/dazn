@@ -31,6 +31,7 @@ Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMyIsImVtYWlsIjoic2FuZGVz
       "streamingLink": "https://example.com/movie1"
     }
     ```
+* GET http://localhost:3000/search?q=Movie
 
 ### Missing feature
 * Unique Id in MangoDB - Timeout in Implementation
