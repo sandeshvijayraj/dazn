@@ -3,7 +3,8 @@ The project is a demo application that showcases movies api as per DAZN Intervie
 
 ## Pre requisites
 * Docker - You need to have docker service running locally
-* Docker-compose - We use Docker compose to run multiple container
+* Docker-compose - We will use Docker compose to run multiple container here
+* [Docker compose Instalation](https://docs.docker.com/compose/install/)
 
 ## How to run
 * Clone the complete project using `git clone`
